@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!-- 新增頁面時複製本檔到專案根目錄並改名（見 CLAUDE.md 8.4）。
+     記得：1) 改 <title> 與 <h1>　2) 在 assets/js/site.js 的 NAV 加一項　3) 更新 CLAUDE.md 第 3、7 節 -->
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>頁面名稱｜論文札記</title>
+  <meta name="description" content="這個頁面的一句話說明。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <!-- 導覽列與頁尾由 site.js 自動產生，這兩個標籤保持空白 -->
+  <header id="site-header"></header>
+
+  <main class="container">
+    <section class="page-title">
+      <h1>頁面名稱</h1>
+      <p>這個頁面的簡短說明。</p>
+    </section>
+
+    <!-- 頁面內容：由 assets/js/<頁面名>.js 用 PN.loadData() 取得資料後填入 -->
+    <div id="content"><p class="empty">載入中…</p></div>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script src="assets/js/site.js"></script>
+  <!-- <script src="assets/js/頁面名.js"></script> -->
+</body>
+</html>

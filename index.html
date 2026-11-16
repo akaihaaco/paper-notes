@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>論文列表｜論文札記</title>
+  <meta name="description" content="個人論文閱讀筆記：每篇論文都用同一套格式整理，方便搜尋、比較與複習。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header id="site-header"></header>
+
+  <main class="container">
+    <section class="page-title">
+      <h1>論文札記</h1>
+      <p>把讀過的論文整理成格式一致的中文筆記：研究問題、核心方法、主要結果、貢獻、限制與個人心得。可以用關鍵字搜尋，或依主題與閱讀狀態篩選。</p>
+    </section>
+
+    <ul class="stats" id="stats" aria-label="統計"></ul>
+
+    <section class="toolbar" aria-label="搜尋與篩選">
+      <div class="toolbar-row">
+        <input type="search" id="search" placeholder="搜尋標題、作者、摘要、主題…" aria-label="搜尋論文">
+        <select id="status-filter" aria-label="閱讀狀態">
+          <option value="">全部狀態</option>
+          <option value="read">已讀</option>
+          <option value="reading">閱讀中</option>
+          <option value="to-read">待讀</option>
+        </select>
+        <select id="sort" aria-label="排序方式">
+          <option value="year-desc">年份：新到舊</option>
+          <option value="year-asc">年份：舊到新</option>
+          <option value="rating-desc">推薦程度</option>
+          <option value="added-desc">最近加入</option>
+        </select>
+      </div>
+      <div class="toolbar-row">
+        <span class="toolbar-label">主題</span>
+        <div class="tags" id="tag-filter"></div>
+      </div>
+    </section>
+
+    <p class="muted" id="result-count" aria-live="polite"></p>
+    <div id="paper-list"><p class="empty">載入中…</p></div>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script src="assets/js/site.js"></script>
+  <script src="assets/js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>關於本站｜論文札記</title>
+  <meta name="description" content="論文札記的目的、筆記格式，以及如何用 CLAUDE.md 的規則讓 AI 持續新增論文。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header id="site-header"></header>
+
+  <main class="container">
+    <section class="page-title">
+      <h1>關於本站</h1>
+      <p>論文札記是一個個人論文資料整理網站。它的重點不是單一網頁，而是一套寫在 <code>CLAUDE.md</code> 裡的規則：只要照著規則，AI 就能一直把新的論文整理進來。</p>
+    </section>
+
+    <div class="paper prose">
+      <h2>這個網站怎麼運作</h2>
+      <ol class="steps">
+        <li><strong>一篇論文 = 一個 Markdown 檔。</strong>放在 <code>papers/</code>，檔名是 <code>年份-第一作者姓氏-短標題.md</code>，例如 <code>2019-devlin-bert.md</code>。</li>
+        <li><strong>檔案開頭是書目資料。</strong>標題、作者、年份、發表處、連結、主題標籤、閱讀狀態、推薦程度、一句話摘要。</li>
+        <li><strong>內文固定六個章節。</strong>研究問題 → 核心方法 → 主要結果 → 貢獻與重要性 → 限制與疑問 → 我的筆記。</li>
+        <li><strong>執行一次建置腳本。</strong><code>python scripts/build.py</code> 會檢查格式，並產生網頁要讀的 <code>data/papers.json</code>。</li>
+        <li><strong>網頁自動更新。</strong>論文列表、主題索引、單篇頁面都從資料產生，新增論文不需要改任何 HTML。</li>
+      </ol>
+
+      <h2>為什麼每篇都長一樣</h2>
+      <p>固定的格式讓筆記可以互相比較：想知道兩篇論文各自解決什麼問題，直接對照「研究問題」；想複習實驗數字，直接看「主要結果」。對 AI 來說，固定格式也代表它不用猜「這次要寫成什麼樣子」。</p>
+
+      <h2>給 AI 的規則</h2>
+      <p>所有規則都在專案根目錄的 <code>CLAUDE.md</code>，包含：</p>
+      <ul>
+        <li>專案目的與技術原則（純靜態、不用框架、唯一建置指令）</li>
+        <li>目錄結構與檔案命名、放置方式</li>
+        <li>論文筆記的欄位表與六個固定章節</li>
+        <li>標籤的新增與使用規則</li>
+        <li>網頁風格（顏色變數、字體、可重複使用的元件）</li>
+        <li>新增論文、標籤、頁面、內容類型的標準流程</li>
+        <li>禁止事項與完成前檢查清單</li>
+      </ul>
+      <p>建置腳本會把其中可以自動檢查的規則（檔名、必填欄位、標籤是否存在、章節順序等）實際擋下來，格式不對就不會產生資料。</p>
+
+      <h2>想新增一篇論文時</h2>
+      <p>只要對 AI 說：「依照 CLAUDE.md，幫我新增這篇論文的筆記：<em>（論文連結）</em>」。AI 會複製範本、填好內容、執行建置並回報需要你親自確認的地方（例如「我的筆記」與推薦程度）。</p>
+
+      <h2>注意事項</h2>
+      <p>筆記是閱讀摘要，不是論文原文；引用任何數字或結論之前，請以原論文為準。</p>
+      <p><a class="btn" href="index.html">瀏覽論文列表</a></p>
+    </div>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script src="assets/js/site.js"></script>
+</body>
+</html>

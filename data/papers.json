@@ -1,0 +1,232 @@
+{
+  "_note": "本檔由 scripts/build.py 自動產生，請勿手動編輯。",
+  "tags": {
+    "architecture": {
+      "label": "模型架構",
+      "desc": "提出新的神經網路架構或關鍵結構設計的論文。",
+      "count": 1
+    },
+    "attention": {
+      "label": "注意力機制",
+      "desc": "以 attention／self-attention 為核心的方法。",
+      "count": 1
+    },
+    "pretraining": {
+      "label": "預訓練",
+      "desc": "在大量無標註資料上先訓練、再遷移到下游任務的方法。",
+      "count": 1
+    },
+    "fine-tuning": {
+      "label": "微調",
+      "desc": "把預訓練模型調整到特定任務的方法與技巧。",
+      "count": 2
+    },
+    "peft": {
+      "label": "參數高效微調",
+      "desc": "只訓練少量參數就能調整大型模型（PEFT）。",
+      "count": 1
+    },
+    "retrieval": {
+      "label": "檢索增強",
+      "desc": "結合外部知識庫檢索來輔助生成（RAG 相關）。",
+      "count": 1
+    },
+    "prompting": {
+      "label": "提示技巧",
+      "desc": "不更新模型參數，靠設計提示（prompt）改善表現。",
+      "count": 2
+    },
+    "reasoning": {
+      "label": "推理",
+      "desc": "讓語言模型進行多步驟推理的研究。",
+      "count": 2
+    },
+    "agent": {
+      "label": "AI 代理人",
+      "desc": "讓模型使用工具、與環境互動並完成任務。",
+      "count": 1
+    }
+  },
+  "papers": [
+    {
+      "id": "2023-yao-react",
+      "title": "ReAct: Synergizing Reasoning and Acting in Language Models",
+      "title_zh": "ReAct：在語言模型中結合推理與行動",
+      "authors": [
+        "Shunyu Yao",
+        "Jeffrey Zhao",
+        "Dian Yu",
+        "Nan Du",
+        "Izhak Shafran",
+        "Karthik Narasimhan",
+        "Yuan Cao"
+      ],
+      "year": 2023,
+      "venue": "ICLR 2023",
+      "url": "https://arxiv.org/abs/2210.03629",
+      "tags": [
+        "prompting",
+        "reasoning",
+        "agent"
+      ],
+      "status": "reading",
+      "rating": null,
+      "added": "2026-11-16",
+      "summary": "讓語言模型交替產生「思考」與「行動」，一邊推理一邊呼叫外部工具取得資訊，提升問答與決策任務的表現與可解釋性。",
+      "related": [
+        "2022-wei-chain-of-thought",
+        "2020-lewis-rag"
+      ]
+    },
+    {
+      "id": "2022-hu-lora",
+      "title": "LoRA: Low-Rank Adaptation of Large Language Models",
+      "title_zh": "LoRA：大型語言模型的低秩適應",
+      "authors": [
+        "Edward J. Hu",
+        "Yelong Shen",
+        "Phillip Wallis",
+        "Zeyuan Allen-Zhu",
+        "Yuanzhi Li",
+        "Shean Wang",
+        "Lu Wang",
+        "Weizhu Chen"
+      ],
+      "year": 2022,
+      "venue": "ICLR 2022",
+      "url": "https://arxiv.org/abs/2106.09685",
+      "tags": [
+        "fine-tuning",
+        "peft"
+      ],
+      "status": "read",
+      "rating": 5,
+      "added": "2026-11-16",
+      "summary": "凍結預訓練權重，只訓練插入的低秩矩陣 A、B，就能用極少的參數達到接近完整微調的效果，而且推論時不增加延遲。",
+      "related": [
+        "2019-devlin-bert",
+        "2017-vaswani-attention-is-all-you-need"
+      ]
+    },
+    {
+      "id": "2022-wei-chain-of-thought",
+      "title": "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models",
+      "title_zh": "思維鏈提示能引出大型語言模型的推理能力",
+      "authors": [
+        "Jason Wei",
+        "Xuezhi Wang",
+        "Dale Schuurmans",
+        "Maarten Bosma",
+        "Brian Ichter",
+        "Fei Xia",
+        "Ed Chi",
+        "Quoc Le",
+        "Denny Zhou"
+      ],
+      "year": 2022,
+      "venue": "NeurIPS 2022",
+      "url": "https://arxiv.org/abs/2201.11903",
+      "tags": [
+        "prompting",
+        "reasoning"
+      ],
+      "status": "read",
+      "rating": 4,
+      "added": "2026-11-16",
+      "summary": "在 few-shot 範例中加入一步步的推理過程，不用微調就能大幅提升大型語言模型在算術、常識與符號推理上的表現。",
+      "related": [
+        "2023-yao-react"
+      ]
+    },
+    {
+      "id": "2020-lewis-rag",
+      "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+      "title_zh": "用於知識密集型 NLP 任務的檢索增強生成",
+      "authors": [
+        "Patrick Lewis",
+        "Ethan Perez",
+        "Aleksandra Piktus",
+        "Fabio Petroni",
+        "Vladimir Karpukhin",
+        "Naman Goyal",
+        "Heinrich Küttler",
+        "Mike Lewis",
+        "Wen-tau Yih",
+        "Tim Rocktäschel",
+        "Sebastian Riedel",
+        "Douwe Kiela"
+      ],
+      "year": 2020,
+      "venue": "NeurIPS 2020",
+      "url": "https://arxiv.org/abs/2005.11401",
+      "tags": [
+        "retrieval"
+      ],
+      "status": "read",
+      "rating": 4,
+      "added": "2026-11-16",
+      "summary": "把預訓練的生成模型與可檢索的 Wikipedia 向量索引結合，讓模型先檢索文件再生成答案，知識可以直接更換而不必重新訓練。",
+      "related": [
+        "2019-devlin-bert",
+        "2023-yao-react"
+      ]
+    },
+    {
+      "id": "2019-devlin-bert",
+      "title": "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding",
+      "title_zh": "BERT：用於語言理解的深層雙向 Transformer 預訓練",
+      "authors": [
+        "Jacob Devlin",
+        "Ming-Wei Chang",
+        "Kenton Lee",
+        "Kristina Toutanova"
+      ],
+      "year": 2019,
+      "venue": "NAACL 2019",
+      "url": "https://arxiv.org/abs/1810.04805",
+      "tags": [
+        "pretraining",
+        "fine-tuning"
+      ],
+      "status": "read",
+      "rating": 5,
+      "added": "2026-11-16",
+      "summary": "用遮罩語言模型預訓練雙向 Transformer encoder，再加一層輸出層微調，就在 11 項 NLP 任務上刷新紀錄。",
+      "related": [
+        "2017-vaswani-attention-is-all-you-need",
+        "2022-hu-lora",
+        "2020-lewis-rag"
+      ]
+    },
+    {
+      "id": "2017-vaswani-attention-is-all-you-need",
+      "title": "Attention Is All You Need",
+      "title_zh": "你只需要注意力機制",
+      "authors": [
+        "Ashish Vaswani",
+        "Noam Shazeer",
+        "Niki Parmar",
+        "Jakob Uszkoreit",
+        "Llion Jones",
+        "Aidan N. Gomez",
+        "Łukasz Kaiser",
+        "Illia Polosukhin"
+      ],
+      "year": 2017,
+      "venue": "NeurIPS 2017",
+      "url": "https://arxiv.org/abs/1706.03762",
+      "tags": [
+        "architecture",
+        "attention"
+      ],
+      "status": "read",
+      "rating": 5,
+      "added": "2026-11-16",
+      "summary": "提出完全以注意力機制組成、不使用 RNN 與 CNN 的 Transformer 架構，訓練可平行化，並在機器翻譯上取得當時最佳成績。",
+      "related": [
+        "2019-devlin-bert",
+        "2022-hu-lora"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "architecture": { "label": "模型架構", "desc": "提出新的神經網路架構或關鍵結構設計的論文。" },
+  "attention": { "label": "注意力機制", "desc": "以 attention／self-attention 為核心的方法。" },
+  "pretraining": { "label": "預訓練", "desc": "在大量無標註資料上先訓練、再遷移到下游任務的方法。" },
+  "fine-tuning": { "label": "微調", "desc": "把預訓練模型調整到特定任務的方法與技巧。" },
+  "peft": { "label": "參數高效微調", "desc": "只訓練少量參數就能調整大型模型（PEFT）。" },
+  "retrieval": { "label": "檢索增強", "desc": "結合外部知識庫檢索來輔助生成（RAG 相關）。" },
+  "prompting": { "label": "提示技巧", "desc": "不更新模型參數，靠設計提示（prompt）改善表現。" },
+  "reasoning": { "label": "推理", "desc": "讓語言模型進行多步驟推理的研究。" },
+  "agent": { "label": "AI 代理人", "desc": "讓模型使用工具、與環境互動並完成任務。" }
+}
